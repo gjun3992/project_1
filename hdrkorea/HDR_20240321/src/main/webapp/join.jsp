@@ -24,9 +24,11 @@
 <h2 >홈쇼핑 회원등록</h2><br/>
 
 
-<form  method="post" action="action.jsp" name="frm">
+<form  method="post" action="action.jsp" name="frm"
+onsubmit="return check(this);">
 
-<input type="hidden" name="mode" value="insert">
+<input type="hidden" name="mode" value="insert" />
+		
 	
 <%
 Connection conn= null;
@@ -92,5 +94,49 @@ System.out.println(today);
 </form>
 </section>
 <jsp:include page="footer.jsp"></jsp:include>
+
+<script type="text/javascript">
+function check(form) {
+	 if (form.custname.value === "") {
+	        alert("이름을 입력하시오");
+	        form.custname.focus();
+	        return false;
+	    }
+	    
+	    if (form.phone.value === "") {
+	        alert("전화번호를 입력하시오");
+	        form.phone.focus();
+	        return false;
+	    }
+	    
+	    if (form.address.value === "") {
+	        alert("주소를 입력하시오");
+	        form.address.focus();
+	        return false;
+	    }
+	    
+	    if (form.joindate.value === "") {
+	        alert("가입 날짜를 입력하시오");
+	        form.joindate.focus();
+	        return false;
+	    }
+	    
+	    if (form.grade.value === "") {
+	        alert("등급을 입력하시오");
+	        form.grade.focus();
+	        return false;
+	    }
+	    
+	    if (form.city.value === "") {
+	        alert("도시코드를 입력하시오");
+	        form.city.focus();
+	        return false;
+	    }
+	    
+	    alert("회원등록이 완료 되었습니다");
+	    return true;
+	}
+
+</script>
 </body>
 </html>

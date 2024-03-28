@@ -77,9 +77,9 @@ try {
     <tr>
 		<td colspan="2">
 		
-		<button type="submit" name="mode" value="modify"onclick="window.open("popup.jsp", "width : 300px", "팝업 옵션");">수 정</button>
+		<button type="submit" name="mode" value="modify">수 정</button>
         <button type="submit" value="look up" formaction="list.jsp">조 회</button>
-        <button type="submit" name="mode" value="delete" onclick="check_del()">삭 제</button>
+        <button type="submit" name="mode" value="delete" >삭 제</button>
 		</td>
 	</tr>
 	
